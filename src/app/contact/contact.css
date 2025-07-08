@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* Grid container for cards */
+.container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Contact card styling */
+.contactCard {
+  top:-3rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 2rem;
+  border-radius: 16px;
+  width:10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover scaling */
+.contactCard:hover {
+  transform: scale(1.05);
+}
+
+/* Contact card content */
+.contactDetails h2 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: #0077b6;
+  word-break: break-word;
+  font-size: 0.9rem;
+  z-index: 2;
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* Radial background hover effect */
+.contactCard::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+  opacity: 0.5;
+}
+
+.contactCard:hover::before {
+  transform: scale(2);
+}
+
+/* Themed background colors */
+.email::before {
+  background: rgba(29, 78, 216, 0.5);
+}
+
+.reddit::before {
+  background: rgba(255, 69, 0, 0.5);
+}
+
+.discord::before {
+  background: rgba(88, 101, 242, 0.5);
+}
+
+.linkedin::before {
+  background: rgba(0, 119, 181, 0.5);
+}
+
+/* Spin effect for icons */
+.hvr-icon-spin {
+  display: inline-block;
+  transform: perspective(1px) translateZ(0);
+}
+
+.hvr-icon-spin .hvr-icon {
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+}
+
+.hvr-icon-spin:hover .hvr-icon,
+.hvr-icon-spin:focus .hvr-icon,
+.hvr-icon-spin:active .hvr-icon {
+  transform: rotate(360deg);
+}
+
+.contactImage {
+  width: 60px;
+  height: 60px;
+  margin-top: 1rem;
+  z-index: 2;
+}
+
+/* Layout: left (form) + right (cards) */
+.contactPage {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+/* Contact form wrapper */
+.contactForm {
+  flex: 1;
+  max-width: 400px;
+  padding: 2rem;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contactForm h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* Inputs & textarea */
+.formInput, .formTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Permanent Marker', cursive;
+  box-sizing: border-box;
+}
+
+.formInput::placeholder, .formTextarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button */
+.formButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(0, 119, 181, 0.8);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.formButton:hover {
+  background-color: rgba(0, 119, 181, 1);
+}
+
+/* Container for cards */
+.contactContainer {
+  flex: 1;
+}

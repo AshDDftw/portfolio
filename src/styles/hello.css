@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Flex:opsz,wght@8..144,600;8..144,900&family=Roboto+Serif:opsz,wght@8..144,600;8..144,700&display=swap");
+
+
+hi {
+  display: inline-block;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  font-family: "Roboto flex";
+  border-right: 3px solid;
+  font-size: clamp(3rem, 6vw + 1rem, 5rem);
+  line-height: 1.5;
+  animation: type 3s steps(22) 1s forwards infinite, blink 0.5s steps(1) infinite;
+}
+
+
+@keyframes type {
+  to {
+    width: 22ch;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #000;
+  }
+}

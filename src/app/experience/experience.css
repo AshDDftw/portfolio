@@ -1,0 +1,136 @@
+body {
+  background-color: #000;
+}
+
+/* Container for experience cards */
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 50px 0;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Individual card */
+.experience-card {
+  flex-basis: calc(33.333% - 30px);
+  margin: 0 15px 30px;
+  overflow: hidden;
+  border-radius: 28px;
+  position: relative;
+  /* background-color: #121212; */
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.experience-card:hover .experience-card-bg {
+  transform: scale(10);
+}
+
+/* Title styling */
+.experience-card h3 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFF;
+  margin: 0 0 25px;
+  z-index: 2;
+  position: relative;
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* Company name styling */
+.experience-card h4 {
+  font-size: 18px;
+  color: #f9b234;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+  margin: 0 0 12px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* Description styling */
+.experience-card p {
+  font-size: 16px;
+  color: #FFF;
+  z-index: 2;
+  position: relative;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.experience-card-bg {
+  height: 128px;
+  width: 128px;
+  background-color: rgba(62, 205, 94, 0.2); /* default fallback */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+/* Custom translucent tints for each card */
+.experience-card:nth-child(2n) .experience-card-bg {
+  background-color: rgba(213, 243, 17, 0.2); /* green */
+}
+
+.experience-card:nth-child(3n) .experience-card-bg {
+  background-color: rgba(251, 136, 4, 0.235)/* orange-red */
+}
+
+.experience-card:nth-child(4n) .experience-card-bg {
+  background-color: rgba(33, 84, 143, 0.2); /* violet */
+}
+
+.experience-card:nth-child(5n) .experience-card-bg {
+  background-color: rgba(205, 62, 148, 0.2); /* pink */
+}
+
+.experience-card:nth-child(6n) .experience-card-bg {
+  background-color: rgba(76, 73, 234, 0.2); /* blue */
+}
+
+
+/* Responsive adjustments */
+@media only screen and (max-width: 979px) {
+  .experience-card {
+    flex-basis: calc(50% - 30px);
+  }
+  .experience-card h3 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .experience-container {
+    padding: 40px 10px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .experience-card {
+    flex-basis: 100%;
+  }
+  .experience-card h3 {
+    font-size: 24px;
+    min-height: 72px;
+    line-height: 1;
+  }
+  .experience-card {
+    padding: 22px 40px;
+  }
+  .experience-card h4 {
+    font-size: 16px;
+  }
+}

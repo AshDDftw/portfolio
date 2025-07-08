@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import RootLayout from './layout';
+// import RootLayout from './layout';
 import Card from './card'; // Adjust the path if needed
 
 export default function LandingPage() {

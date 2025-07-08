@@ -6,7 +6,7 @@ import './skills.css';
 export default function Skills(){
     useEffect(() => {
         const icons = document.querySelectorAll('.skills img');
-        const text = document.querySelector('.skills-text');
+        // const text = document.querySelector('.skills-text');
         
         icons.forEach(icon => {
             // Random position
@@ -45,6 +45,7 @@ export default function Skills(){
             <img className='pytorch' src = 'techstackicons/pytorch.png' alt='pytorch'></img>
             <img className='opencv' src = 'techstackicons/opencv.png' alt='opencv'></img>
             <img className='streamlit' src = 'techstackicons/streamlit.png' alt='streamlit'></img>
+            <img className='springboot' src = 'techstackicons/springboot.png' alt='springboot'></img>
         </div>
     )
 }

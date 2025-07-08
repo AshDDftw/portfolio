@@ -16,7 +16,7 @@ export const projects = [
     description: "Developed microservices in Spring Boot for authentication and editing. Integrated Node.js frontend and Docker-based deployment. Achieved seamless multi-user concurrent document editing.",
     techstack: [
       "techstackicons/springboot.png",
-      "techstackicons/nodejs.png",
+      // "techstackicons/nodejs.png",
       // "techstackicons/docker.png",
       // "techstackicons/git.png",
       // "techstackicons/github.png"

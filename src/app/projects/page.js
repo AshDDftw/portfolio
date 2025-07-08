@@ -58,23 +58,23 @@ export default function Contact(){
             <div className="projects-container">
                 
                 {projectsData.map((project, index) => (
-                    <div>
-                        <h2 className='project-section'>{project.section}</h2>
-                        <h3 className='project-name'>{project.name}</h3>
-                        <div key={index} className="project-card">
-                        <p>{project.description}</p>
-                        
-                        </div>
-                        <div className="tech-stack">
-                            {project.techstack.map((tech, techIndex) => (
-                                <img key={techIndex} src={tech} alt={`Tech ${techIndex + 1}`} />
-                            ))}
-                        </div>
-                        <a className = " tech-stack" href={project.github} target="_blank" rel="noopener noreferrer">
-                            <img src="techstackicons/github.png" alt="GitHub" />
-                        </a>
-                    </div>
-                ))}
+  <div key={index}>
+    <h2 className='project-section'>{project.section}</h2>
+    <h3 className='project-name'>{project.name}</h3>
+    <div className="project-card">
+      <p>{project.description}</p>
+    </div>
+    <div className="tech-stack">
+      {project.techstack.map((tech, techIndex) => (
+        <img key={techIndex} src={tech} alt={`Tech ${techIndex + 1}`} />
+      ))}
+    </div>
+    <a className="tech-stack" href={project.github} target="_blank" rel="noopener noreferrer">
+      <img src="techstackicons/github.png" alt="GitHub" />
+    </a>
+  </div>
+))}
+
             </div>
         </div>
     )

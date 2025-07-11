@@ -8,7 +8,7 @@ export const projects = [
       "techstackicons/git.png",
       // "techstackicons/github.png"
     ],
-    github: "https://github.com/user/btree-locking-project"
+    github: "https://github.com/AshDDftw/BTreeLocking"
   },
   {
     section: "Software Dev",
@@ -21,7 +21,7 @@ export const projects = [
       // "techstackicons/git.png",
       // "techstackicons/github.png"
     ],
-    github: "https://github.com/user/document-editor"
+    github: "https://github.com/AshDDftw/sde-minor-project"
   },
   {
     section: "Deep Learning",
@@ -33,7 +33,7 @@ export const projects = [
       // "techstackicons/git.png",
       // "techstackicons/github.png"
     ],
-    github: "https://github.com/user/handwriting-verification"
+    github: "https://github.com/AshDDftw/handwriting_verification"
   },
   {
     section: "Deep Learning",
@@ -46,7 +46,7 @@ export const projects = [
       // "techstackicons/git.png",
       // "techstackicons/github.png"
     ],
-    github: "https://github.com/user/logo-detection"
+    github: "https://github.com/AshDDftw/Football-Club-Logo-Classifier"
   },
   {
     section: "Deep Learning",
@@ -58,7 +58,7 @@ export const projects = [
       // "techstackicons/git.png",
       // "techstackicons/github.png"
     ],
-    github: "https://github.com/user/gnn-llm-project"
+    github: "https://github.com/AshDDftw/Odour-GNN"
   },
   {
     section: "Research",
@@ -74,7 +74,7 @@ export const projects = [
   {
     section: "Android App",
     name: "Agritech App",
-    description: "Flutter app for the agritech industry. Enables farmers to post their crop problems and gain expert advice in real-time with full chat functionality. Deployed the app on Google Play Store.",
+    description: "Flutter app for the agritech industry. Enables farmers to post their crop problems and gain expert advice in real-time with full chat functionality. Deployed the app on Google Play Store.\n Sorry cannot share the link (it was part of my intern)",
     techstack: [
       "techstackicons/flutter.png",
       "techstackicons/aws.png",
@@ -83,24 +83,24 @@ export const projects = [
       // "techstackicons/git.png",
       // "techstackicons/github.png"
     ],
-    github: "https://github.com/user/agritech-app"
+    // github: "https://github.com/user/agritech-app"
   },
   {
     section: "Android App",
     name: "Food Delivery App",
-    description: "Designed and developed an end-to-end food delivery app for customers, deliverymen, and vendors with minimal latency between order placing and cancellation to avoid API collisions. Incorporated payment portal via PhonePe API.",
+    description: "Designed and developed an end-to-end food delivery app for customers, deliverymen, and vendors with minimal latency between order placing and cancellation to avoid API collisions. Incorporated payment portal via PhonePe API.\n Freelance Project , again cannot share the link",
     techstack: [
       "techstackicons/firebase.png",
       "techstackicons/flutter.png",
       // "techstackicons/git.png",
       // "techstackicons/github.png"
     ],
-    github: "https://github.com/user/food-delivery-app"
+    // github: "https://github.com/user/food-delivery-app"
   },
   {
     section: "AI Automation",
     name: "Stock AI",
-    description: "Currently designing an AI that can auto-invest in the market according to the present scenario by analyzing news, historical data, and current status to maximize profit.",
+    description: "Currently designing an AI that can auto-invest in the market according to the present scenario by analyzing news, historical data, and current status to maximize profit.\n Self project so still under development will update as soon as something concrete is there.",
     techstack: [
       "techstackicons/nodejs.png",
       "techstackicons/python.png",
@@ -109,7 +109,7 @@ export const projects = [
       // "techstackicons/git.png",
       // "techstackicons/github.png"
     ],
-    github: "https://github.com/user/stock-ai-project"
+    // github: "https://github.com/user/stock-ai-project"
   },
   {
   section: "Deep Learning",
@@ -121,7 +121,7 @@ export const projects = [
     // "techstackicons/git.png",
     // "techstackicons/github.png"
   ],
-  github: "https://github.com/user/object-detection-webapp"
+  github: "https://github.com/AshDDftw/object_detection_webapp"
 }
 
 ];

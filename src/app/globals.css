@@ -249,3 +249,21 @@ html, body {
   left: 20vw;
   /* width: 20vw; */
 }
+
+.website-info{
+  position: absolute;
+  top: 11rem;
+  left:10rem;
+  transform: rotate(-0.1rad);
+  -webkit-transform: rotate(-0.1rad);
+  -moz-transform: rotate(-0.1rad);
+  -ms-transform: rotate(-0.1rad);
+  -o-transform: rotate(-0.1rad);
+}
+
+.web-info-text{
+
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  color:#00ffff
+}

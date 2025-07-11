@@ -7,6 +7,12 @@ import Card from './card'; // Adjust the path if needed
 export default function LandingPage() {
   return (
     <div>
+      <div className='website-info'>
+        <div className='web-info-text'>
+          <p>This website is always under development , so if any links dont work or pages are not responsive means I was experimenting .</p>
+          Please bear. Sorry....
+        </div>
+      </div>
       <div className='profilepicsection'>
         <p className='profilepictext'>
           This is me! Nice to meet you!

@@ -1,0 +1,24 @@
+.home-button {
+  position: fixed;
+  top: 6rem;
+  left: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(29, 185, 84, 0.5);
+  border-radius: 25px;
+  color: #1db954;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.home-button:hover {
+  background: rgba(29, 185, 84, 0.1);
+  border-color: #1db954;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+}

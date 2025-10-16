@@ -3,6 +3,7 @@
 import React from 'react';
 import { experience } from './data.js';
 import {useState, useEffect} from 'react';
+import HomeButton from '../components/HomeButton';
 import './experience.css';
 
 // app/landing/profile/page.js
@@ -19,6 +20,7 @@ export default function ProfilePage() {
 
   return (
     <div>
+      <HomeButton />
       <div className="experience-container">
         {experienceData.map((exp, index) => (
           <div className="experience-card" key={index}>

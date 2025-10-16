@@ -4,25 +4,32 @@ body {
 
 /* Container for experience cards */
 .experience-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  justify-content: center;
+  /* padding: 120px 5vw; */
+  max-width: 95vw;
+  /* margin: 30vh 25vw 30vw 30vh; */
+  margin-top: 30vh;
+  margin-left: 5vw;
+  /* min-height: 100vh; */
+  justify-items: center;
 }
 
 /* Individual card */
 .experience-card {
-  flex-basis: calc(33.333% - 30px);
-  margin: 0 15px 30px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 300px;
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: 20px;
   position: relative;
-  /* background-color: #121212; */
-  background: rgba(255, 255, 255, 0.05);
-  padding: 30px 20px;
-  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .experience-card:hover {
@@ -114,7 +121,11 @@ body {
 
 @media only screen and (max-width: 767px) {
   .experience-container {
-    padding: 40px 10px;
+    padding: 120px 15px;
+  }
+  
+  .experience-card {
+    min-width: 250px;
   }
 }
 

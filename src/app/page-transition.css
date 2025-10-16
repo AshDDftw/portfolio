@@ -1,0 +1,110 @@
+.page-transition {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-fill-mode: both;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-transition::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  z-index: 1;
+}
+
+.page-transition.transitioning::before {
+  animation: shimmer 0.8s ease-out;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.page-transition.transitioning.from-left {
+  animation-name: slideInFromLeft, shake;
+}
+
+.page-transition.transitioning.from-right {
+  animation-name: slideInFromRight, shake;
+}
+
+.page-transition.transitioning.from-top {
+  animation-name: slideInFromTop, shake;
+}
+
+.page-transition.transitioning.from-bottom {
+  animation-name: slideInFromBottom, shake;
+}
+
+.page-transition.transitioning.from-center {
+  animation-name: slideInFromCenter, shake;
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100vw) rotate(-5deg); opacity: 0; }
+  60% { transform: translateX(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(100vw) rotate(5deg); opacity: 0; }
+  60% { transform: translateX(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+  0% { transform: translateY(-100vh) rotate(-3deg); opacity: 0; }
+  60% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+  0% { transform: translateY(100vh) rotate(3deg); opacity: 0; }
+  60% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes slideInFromCenter {
+  0% { transform: scale(0) rotate(180deg); opacity: 0; }
+  60% { transform: scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes shake {
+  60%, 70%, 80%, 90% {
+    transform: translateX(0);
+  }
+  65% { transform: translateX(-4px) rotate(-1deg); }
+  75% { transform: translateX(4px) rotate(1deg); }
+  85% { transform: translateX(-2px) rotate(-0.5deg); }
+  95% { transform: translateX(2px) rotate(0.5deg); }
+}
+
+/* Enhanced page-specific effects */
+.page-transition.transitioning {
+  position: relative;
+}
+
+.page-transition.transitioning::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 0.8s ease-out;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0; transform: scale(1); }
+}

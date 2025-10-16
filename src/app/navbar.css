@@ -1,9 +1,8 @@
 
 .Navbar {
   position: absolute;
-  top: 20px; /* spacing from top */
-  /* left: 20px; */
-  right:0px;
+  top: 80px;
+  right: 0px;
   transform: translateX(-50%);
   z-index: 1000;
   padding: 0;
@@ -13,57 +12,88 @@
 
 /* Glassmorphic container */
 .Navbar-children {
-  /* display: flex; */
   justify-content: center;
-  border-radius: 12px;
-  padding: 10px 20px;
+  border-radius: 15px;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
 
-  background:transparent;
-  /* backdrop-filter: blur(10px); */
-  /* -webkit-backdrop-filter: blur(10px); */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.Navbar-children:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Horizontal nav list */
 
 .Navbar-children-ul {
   list-style: none;
-  /* display: flex; */
-  padding: 20px;;
+  display: flex;
   align-items: center;
   padding: 0;
   margin: 0;
-  
+  gap: 5px;
 }
 
 .Navbar-children-li {
-  
   position: relative;
   color: #fff;
-  font-size: 18px;
-  font-family:'Permanent Marker',cursive;
+  font-size: 16px;
+  font-family: 'Permanent Marker', cursive;
   font-weight: 500;
-  margin: 0 20px;
+  margin: 0 15px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  padding: 20px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Navbar-children-li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+  color: #00ffff;
 }
 
 /* Underline effect */
 .Navbar-children-li::before {
   content: '';
   position: absolute;
-  bottom: -4px;
-  left: 0;
+  bottom: 4px;
+  left: 50%;
   height: 2px;
   width: 0%;
-  background: #34efdf;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
   border-radius: 12px;
   transition: all 0.3s ease;
-  
+  transform: translateX(-50%);
 }
 
 .Navbar-children-li:hover::before {
-  width: 100%;
+  width: 80%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .Navbar {
+    top: 70px;
+    right: 10px;
+  }
+  
+  .Navbar-children {
+    padding: 10px 15px;
+  }
+  
+  .Navbar-children-li {
+    font-size: 14px;
+    margin: 0 8px;
+    padding: 8px 12px;
+  }
 }

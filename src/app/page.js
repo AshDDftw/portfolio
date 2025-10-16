@@ -1,39 +1,71 @@
 'use client';
 
-import React from 'react';
-// import RootLayout from './layout';
-import Card from './card'; // Adjust the path if needed
+import React, { useEffect, useState } from 'react';
+import Card from './card';
 
 export default function LandingPage() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [typewriterText, setTypewriterText] = useState('');
+  const fullText = "Judges a book by its cover.....";
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Typewriter effect
+    let i = 0;
+    const timer = setInterval(() => {
+      if (i < fullText.length) {
+        setTypewriterText(fullText.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <div>
-      <div className='website-info'>
-        <div className='web-info-text'>
-          <p>This website is always under development , so if any links dont work or pages are not responsive means I was experimenting .</p>
-          Please bear. Sorry....
+    <div className={`landing-container ${isVisible ? 'reveal active' : 'reveal'}`}>
+      {/* Hero Section */}
+      <div className='hero-section'>
+        <div className='website-info hover-lift'>
+          <div className='web-info-text'>
+            <p>🚀 Portfolio v2.0 - Always evolving, always improving</p>
+            <p>Experience the journey of continuous development</p>
+          </div>
+        </div>
+        
+        <div className='profilepicsection hover-lift'>
+          <div className='profile-glow'></div>
+          <p className='profilepictext'>
+            Hello World! 👋 Nice to meet you!
+          </p>
+          <img className='profilepic' src='profilepic.png' alt='profile pic' />
         </div>
       </div>
-      <div className='profilepicsection'>
-        <p className='profilepictext'>
-          This is me! Nice to meet you!
+
+      {/* Dynamic Text Section */}
+      <div className='text-section'>
+        <p className='intro typewriter'>
+          {typewriterText}<span className="highlight">cover</span>
         </p>
-        <img className='profilepic' src='profilepic.png' alt='profile pic' />
+        <p className='intro2 fade-in'>
+          Because if the cover doesn&apos;t impress you, what else can? ✨
+        </p>
+        <p className='intro3 slide-up'>Someone who creates experiences</p>
       </div>
 
-      <div>
-        <p className='intro'>
-          Judges a book by its <span className="highlight">cover</span>.....
-        </p>
-        <p className='intro2'>
-          Because if the cover does not impress you what else can?
-        </p>
-        <p className='intro3'>Someone who</p>
+      {/* CTA Section */}
+      <div className='cta-section'>
+        <button className='cta-button hover-lift'>
+          Explore My Work 🚀
+        </button>
       </div>
 
-      <div className="card">
-      <Card />
+      <div className="card hover-lift">
+        <Card />
       </div>
-      
     </div>
   );
 }

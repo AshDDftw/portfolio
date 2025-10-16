@@ -1,6 +1,9 @@
 'use client';
 import './globals.css';
 import { Navbar } from './navbar';
+import PageTransition from './page-transition';
+import NavigationButtons from './navigation-buttons';
+import ProfessionalEnhancements from './professional-enhancements';
 import React, { useState, useEffect } from 'react';
 
 export default function RootLayout({ children }) {
@@ -24,8 +27,12 @@ export default function RootLayout({ children }) {
         <div className="main"></div>
  
           <div className="landing-layout">
+            <ProfessionalEnhancements />
             <Navbar navigationChildren={navigationData} />
-            <main>{children}</main>
+            <main>
+              <PageTransition>{children}</PageTransition>
+            </main>
+            <NavigationButtons />
           </div>
 
       </body>

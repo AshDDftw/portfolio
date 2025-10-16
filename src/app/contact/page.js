@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import HomeButton from '../components/HomeButton';
 import './contact.css';
 import { contactData } from './data.js';
 
@@ -28,6 +29,7 @@ export default function Contact() {
 
   return (
     <div className="contactPage">
+      <HomeButton />
       {/* Contact Form */}
       <div className="contactForm">
         <h2>Send Me a Message</h2>

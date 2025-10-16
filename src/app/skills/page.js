@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import HomeButton from '../components/HomeButton';
 import './skills.css'; 
 
 export default function Skills(){
@@ -24,6 +25,7 @@ export default function Skills(){
 
     return(
         <div className='skills'>
+            <HomeButton />
             <p className='skills-text'>I am always looking to improve my techstack (and hope to add more icons)</p>
             <Image className='js' src='/techstackicons/js.png' alt='javascript' width={64} height={64} />
             <Image className='github' src='/techstackicons/github.png' alt='github' width={64} height={64} />

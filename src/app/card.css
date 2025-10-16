@@ -8,6 +8,7 @@
 }
 
 .music-card {
+  margin-top:-40vh;
   width: 30vw;
   height: 280px;
   background: linear-gradient(135deg, #1db954, #191414, 0.5);

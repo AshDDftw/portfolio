@@ -3,6 +3,7 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
 import {projects as projectsList} from './data.js';
+import HomeButton from '../components/HomeButton';
 import './projects.css';
 
 export default function Contact(){
@@ -50,6 +51,7 @@ export default function Contact(){
     }
     return(
         <div>
+            <HomeButton />
             <div className='project-search' >
                 {sections.map((section, index) => (
                     <button className='projectSearchButton' key={index} onClick={handleSearch(section)}>{section}</button>

@@ -6,7 +6,7 @@ import Card from './card';
 export default function LandingPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [typewriterText, setTypewriterText] = useState('');
-  const fullText = "Judges a book by its cover.....";
+  const fullText = "Judges a book by its ";
 
   useEffect(() => {
     setIsVisible(true);
@@ -53,7 +53,7 @@ export default function LandingPage() {
         <p className='intro2 fade-in'>
           Because if the cover doesn&apos;t impress you, what else can? ✨
         </p>
-        <p className='intro3 slide-up'>Someone who creates experiences</p>
+        <p className='intro3 slide-up'>Someone who </p>
       </div>
 
       {/* CTA Section */}
